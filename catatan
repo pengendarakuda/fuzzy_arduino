@@ -1,0 +1,45 @@
+- perubahan dari v2
+
+
+
+- yang diubah 
+ //---(6)-------------------------------(ok)
+   //bagian input untuk memasukkan angka temperature dan humidity ke dalam proses fuzzy
+     int in_analog1 = DHT.temperature;
+     int in_analog2 = DHT.humidity;
+   //-----------------------------------
+ //-------------------------------------
+
+
+ 
+ //---(7)defuzzyfikasi dan output-------(ok)
+   //defuzzyfikasi
+     fuzzy->setInput(1, in_analog1);
+     fuzzy->setInput(2, in_analog2);
+     fuzzy->fuzzify(); //untuk input dari tahap fuzzyfication
+ 
+  
+ //-------------------------------------
+ 
+ 
+ 
+ 
+ 
+-jadi seperti ini 
+//---(6)-------------------------------(ok)
+   //bagian input untuk memasukkan angka temperature dan humidity ke dalam proses fuzzy
+     int in_1 = DHT.temperature;
+     int in_2 = DHT.humidity;
+   //-----------------------------------
+ //-------------------------------------
+
+
+ 
+ //---(7)defuzzyfikasi dan output-------(ok)
+   //defuzzyfikasi
+     fuzzy->setInput(1, in_1);
+     fuzzy->setInput(2, in_2);
+     fuzzy->fuzzify(); //untuk input dari tahap fuzzyfication
+ 
+ 
+   //-------------------------------------
